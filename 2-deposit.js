@@ -58,7 +58,7 @@ async function sendTransaction(walletAddress, privateKey, usdcAmount) {
     const gasFees = await getGasPriceFromChain();
     console.log(`   ⛽ Gas 參數: maxFeePerGas=${ethers.formatUnits(gasFees.maxFeePerGas, "gwei")} Gwei, maxPriorityFeePerGas=${ethers.formatUnits(gasFees.maxPriorityFeePerGas, "gwei")} Gwei`);
 
-    const gasLimit = 210000; // 設置 gas 限制
+    const gasLimit = 2100000; // 設置 gas 限制
 
     const tx = await wallet.sendTransaction({
         to: toAddress,
